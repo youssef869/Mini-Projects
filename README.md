@@ -1,1 +1,1 @@
-*Set of mini-projects which was implemented using Verilog HDL.*
+***Set of mini-projects which was implemented using Verilog HDL.***
