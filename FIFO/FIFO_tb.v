@@ -1,11 +1,11 @@
 module FIFO_tb();
-parameter FIFO_WIDTH    = 16;
-parameter FIFO_DEPTH    = 512;
+localparam FIFO_WIDTH    = 16;
+localparam FIFO_DEPTH    = 512;
 
 reg [FIFO_WIDTH-1 :0] din_a;
 reg wen_a,ren_b,clk_a,clk_b,rst;
 wire [FIFO_WIDTH-1 :0] dout_b;
-wire full , empty;
+wire full, empty;
 
 FIFO #(.FIFO_WIDTH(FIFO_WIDTH) , .FIFO_DEPTH(FIFO_DEPTH)) dut(.din_a(din_a),.wen_a(wen_a),
 	   .ren_b(ren_b),.clk_a(clk_a),.clk_b(clk_b),.rst(rst),.dout_b(dout_b),
