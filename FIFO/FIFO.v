@@ -24,7 +24,7 @@ always @(posedge clk_a) begin
 		wr_ptr <= 0;
 	end
 	else if (wen_a && !full)  begin
-	        mem[wr_ptr] <= din_a;
+		mem[wr_ptr[POINTER_SIZE-1:0]] <= din_a;
 	        wr_ptr <= wr_ptr + 1;
 	end	
 end
@@ -37,7 +37,7 @@ always @(posedge clk_b) begin
 		rd_ptr <= 0;
 	end
 	else if (ren_b && !empty) begin
-		dout_b <= mem[rd_ptr];
+		dout_b <= mem[rd_ptr[POINTER_SIZE-1:0]];
 		rd_ptr <= rd_ptr + 1;
 	end
 end
