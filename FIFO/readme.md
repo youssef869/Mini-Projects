@@ -1,5 +1,5 @@
 # Introduction
-Implementing a FIFO (First-In-First-Out) memory. FIFO is memory structure that stores and retrieves
+Implementing a FIFO (First-In-First-Out) memory. FIFO is a memory structure that stores and retrieves
 data elements in the order they were added. The FIFO memory will be designed to have two main
 operations: writing (enqueuing) data and reading (dequeuing) data. We'll use two internal pointers
 (counters) to keep track of the write and read positions within the memory. The write pointer advances
@@ -14,20 +14,20 @@ when new data is written, and the read pointer advances when data is read.
 # Implementation details
 
 ### **Parameters**
--FIFO_WIDTH: word size inside the FIFO
--FIFO_DEPTH: number of words in the FIFO
+-FIFO_WIDTH: word size inside the FIFO.
+-FIFO_DEPTH: number of words in the FIFO.
 
 ### **Ports**
 
 - **din_a**:  The input data bus used when writing the FIFO.
 - **wen_a**:  If the FIFO is not full, asserting this signal causes
-        data (on din_a) to be written into the FIFO
+        data (on din_a) to be written into the FIFO.
 - **ren_b**:  If the FIFO is not empty, asserting this signal causes
-        data (on dout_b) to be read from the FIFO
-- **clk_a**:  Clock signal for port a, used in the writing operation
-- **clk_b**:  Clock signal for port b, used in the reading operation
+        data (on dout_b) to be read from the FIFO.
+- **clk_a**:  Clock signal for port a, used in the writing operation.
+- **clk_b**:  Clock signal for port b, used in the reading operation.
 - **rst**:    Active high synchronous reset. It resets the dout_b, internal
-        write counter & internal read counters
+        write counter & internal read counters.
 - **dout_b**: The output data bus used when reading from the FIFO.
 - **full**:   When asserted, this signal indicates that the FIFO is
         full. Write requests are ignored when the FIFO is full, initiating a
