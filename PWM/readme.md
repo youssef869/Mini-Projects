@@ -13,7 +13,6 @@ The term duty cycle describes the proportion of 'on' time to the regular interva
 
 ![image](https://github.com/user-attachments/assets/79086425-16df-42b2-8131-939fc8198fce)
 
-![image](https://github.com/user-attachments/assets/0a47283a-b8e1-4916-bb03-f587c83663fb)
 
 
 
