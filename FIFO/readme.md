@@ -14,24 +14,24 @@ when new data is written, and the read pointer advances when data is read.
 # Implementation details
 
 ### **Parameters**
-FIFO_WIDTH: word size inside the FIFO
-FIFO_DEPTH: number of words in the FIFO
+-FIFO_WIDTH: word size inside the FIFO
+-FIFO_DEPTH: number of words in the FIFO
 
 ### **Ports**
 
-din_a:  The input data bus used when writing the FIFO.
-wen_a:  If the FIFO is not full, asserting this signal causes
+-**din_a**:  The input data bus used when writing the FIFO.
+-**wen_a**:  If the FIFO is not full, asserting this signal causes
         data (on din_a) to be written into the FIFO
-ren_b:  If the FIFO is not empty, asserting this signal causes
+-**ren_b**:  If the FIFO is not empty, asserting this signal causes
         data (on dout_b) to be read from the FIFO
-clk_a:  Clock signal for port a, used in the writing operation
-clk_b:  Clock signal for port b, used in the reading operation
-rst:    Active high synchronous reset. It resets the dout_b, internal
+-**clk_a**:  Clock signal for port a, used in the writing operation
+-**clk_b**:  Clock signal for port b, used in the reading operation
+-**rst**:    Active high synchronous reset. It resets the dout_b, internal
         write counter & internal read counters
-dout_b: The output data bus used when reading from the FIFO.
-full:   When asserted, this signal indicates that the FIFO is
+-**dout_b**: The output data bus used when reading from the FIFO.
+-**full**:   When asserted, this signal indicates that the FIFO is
         full. Write requests are ignored when the FIFO is full, initiating a
         write when the FIFO is full is not destructive to the contents of the FIFO.
-empty:  When asserted, this signal indicates that the FIFO is
+-**empty**:  When asserted, this signal indicates that the FIFO is
         empty. Read requests are ignored when the FIFO is empty,
         initiating a read while empty is not destructive to the FIFO.
