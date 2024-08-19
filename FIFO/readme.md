@@ -19,8 +19,8 @@ when new data is written, and the read pointer advances when data is read.
 
 ### **Ports**
 
--**din_a**:  The input data bus used when writing the FIFO.
--**wen_a**:  If the FIFO is not full, asserting this signal causes
+- **din_a**:  The input data bus used when writing the FIFO.
+- **wen_a**:  If the FIFO is not full, asserting this signal causes
         data (on din_a) to be written into the FIFO
 -**ren_b**:  If the FIFO is not empty, asserting this signal causes
         data (on dout_b) to be read from the FIFO
