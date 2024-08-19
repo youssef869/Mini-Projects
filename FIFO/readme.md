@@ -14,8 +14,8 @@ when new data is written, and the read pointer advances when data is read.
 # Implementation details
 
 ### **Parameters**
--FIFO_WIDTH: word size inside the FIFO.
--FIFO_DEPTH: number of words in the FIFO.
+- **FIFO_WIDTH**: word size inside the FIFO.
+- **FIFO_DEPTH**: number of words in the FIFO.
 
 ### **Ports**
 
